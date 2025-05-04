@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import Certifications from './components/Certifications';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import { Box } from '@chakra-ui/react';
 
 export default function Home() {
   return (
@@ -15,13 +16,14 @@ export default function Home() {
       <Navbar />
       <main>
         <section id="hero"><Hero /></section>
-        <section id="experience"><Experience /></section>
-        <section id="projects"><Projects /></section>
-        <section id="skills"><Skills /></section>
-        <section id="certifications"><Certifications /></section>
-        <section id="education"><Education /></section>
-        <section id="contact"><Contact /></section>
+        <Box id="experience" bg="gray.50" _dark={{ bg: "gray.900" }} py={20}><Experience /></Box>
+        <Box id="projects" bg="white" _dark={{ bg: "gray.700" }} py={20}><Projects /></Box>
+        <Box id="skills" bg="gray.50" _dark={{ bg: "gray.900" }} py={20}><Skills /></Box>
+        <Box id="certifications" bg="white" _dark={{ bg: "gray.700" }} py={20}><Certifications /></Box>
+        <Box id="education" bg="gray.50" _dark={{ bg: "gray.900" }} py={20}><Education /></Box>
+        <Box id="contact" bg="white" _dark={{ bg: "gray.700" }} py={20}><Contact /></Box>
       </main>
+
     </>
   );
 }

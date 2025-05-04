@@ -7,6 +7,8 @@ export default function Hero() {
     return (
         <Flex direction={{ base: 'column', md: 'row' }} align="center" justify="space-between" p={10}>
             <Box flex="1" mb={{ base: 8, md: 0 }}>
+                <Image src="/anirudh.jpg" alt="Anirudh Hosur" boxSize="250px" borderRadius="full" />
+
                 <Heading as="h1" size="2xl" mb={4}>
                     Anirudh Hosur
                 </Heading>
@@ -20,7 +22,6 @@ export default function Hero() {
                     <Link href="https://www.youtube.com/watch?v=pli2FXopbHY&list=PLm-WWsmCj25s1MHP7jnH-4JkYfdvXUFa4" isExternal><FaYoutube size="24" /></Link>
                 </Stack>
             </Box>
-            <Image src="/anirudh.jpg" alt="Anirudh Hosur" boxSize="250px" borderRadius="full" />
         </Flex>
     );
 }
