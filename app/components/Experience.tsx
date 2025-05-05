@@ -1,4 +1,3 @@
-// app/components/Experience.tsx
 'use client';
 import { Box, Heading, VStack, Text } from '@chakra-ui/react';
 
@@ -20,16 +19,18 @@ const experiences = [
 export default function Experience() {
     return (
         <Box py={10} px={5}>
-            <Heading mb={6}>Experience</Heading>
-            <VStack align="start" spacing={4}>
-                {experiences.map((exp, index) => (
-                    <Box key={index}>
-                        <Text fontWeight="bold">{exp.role} – {exp.company}</Text>
-                        <Text fontSize="sm" color="gray.500">{exp.duration}</Text>
-                        <Text>{exp.description}</Text>
-                    </Box>
-                ))}
-            </VStack>
+            <Box maxW="7xl" mx="auto">
+                <Heading mb={6}>Experience</Heading>
+                <VStack align="start" spacing={4}>
+                    {experiences.map((exp, index) => (
+                        <Box key={index}>
+                            <Text fontWeight="bold">{exp.role} – {exp.company}</Text>
+                            <Text fontSize="sm" color="gray.500">{exp.duration}</Text>
+                            <Text>{exp.description}</Text>
+                        </Box>
+                    ))}
+                </VStack>
+            </Box>
         </Box>
     );
 }

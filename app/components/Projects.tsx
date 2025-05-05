@@ -1,4 +1,3 @@
-// app/components/Projects.tsx
 'use client';
 import { Box, Heading, VStack, Text, Link, Badge } from '@chakra-ui/react';
 
@@ -20,22 +19,24 @@ const projects = [
 export default function Projects() {
     return (
         <Box py={10} px={5}>
-            <Heading mb={6}>Projects</Heading>
-            <VStack align="start" spacing={4}>
-                {projects.map((project, index) => (
-                    <Box key={index}>
-                        <Link href={project.link} fontWeight="bold" fontSize="lg" isExternal>
-                            {project.title}
-                        </Link>
-                        <Text>{project.description}</Text>
-                        <Box mt={1}>
-                            {project.tech.map((t, i) => (
-                                <Badge key={i} colorScheme="teal" mr={2}>{t}</Badge>
-                            ))}
+            <Box maxW="7xl" mx="auto">
+                <Heading mb={6}>Projects</Heading>
+                <VStack align="start" spacing={4}>
+                    {projects.map((project, index) => (
+                        <Box key={index}>
+                            <Link href={project.link} fontWeight="bold" fontSize="lg" isExternal>
+                                {project.title}
+                            </Link>
+                            <Text>{project.description}</Text>
+                            <Box mt={1}>
+                                {project.tech.map((t, i) => (
+                                    <Badge key={i} colorScheme="teal" mr={2}>{t}</Badge>
+                                ))}
+                            </Box>
                         </Box>
-                    </Box>
-                ))}
-            </VStack>
+                    ))}
+                </VStack>
+            </Box>
         </Box>
     );
 }

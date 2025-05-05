@@ -14,14 +14,15 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main style={{ paddingTop: '80px' }}>
+
         <section id="hero"><Hero /></section>
-        <Box id="experience" bg="gray.50" _dark={{ bg: "gray.900" }} py={20}><Experience /></Box>
-        <Box id="projects" bg="white" _dark={{ bg: "gray.700" }} py={20}><Projects /></Box>
-        <Box id="skills" bg="gray.50" _dark={{ bg: "gray.900" }} py={20}><Skills /></Box>
-        <Box id="certifications" bg="white" _dark={{ bg: "gray.700" }} py={20}><Certifications /></Box>
-        <Box id="education" bg="gray.50" _dark={{ bg: "gray.900" }} py={20}><Education /></Box>
-        <Box id="contact" bg="white" _dark={{ bg: "gray.700" }} py={20}><Contact /></Box>
+        <Box id="experience"><Experience /></Box>
+        <Box id="projects" py={20}><Projects /></Box>
+        <Box id="skills" py={20}><Skills /></Box>
+        <Box id="certifications" py={20}><Certifications /></Box>
+        <Box id="education" py={20}><Education /></Box>
+        <Box id="contact" py={20}><Contact /></Box>
       </main>
 
     </>
