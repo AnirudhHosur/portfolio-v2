@@ -1,9 +1,9 @@
 'use client';
 
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
+import Hero from './components/Hero/Hero';
+import Navbar from './components/Navbar/Navbar';
 import Projects from './components/Project/Projects';
-import Skills from './components/Skills';
+import Skills from './components/Skill/Skills';
 import Certifications from './components/Certifications';
 import Education from './components/Education';
 import Contact from './components/Contact';

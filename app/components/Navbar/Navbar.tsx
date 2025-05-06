@@ -1,8 +1,12 @@
 'use client';
 import {
-    Box, Flex, HStack, Link, IconButton, useColorMode, useColorModeValue
+    Box, Flex, HStack,
+    IconButton,
+    Link,
+    useColorMode, useColorModeValue
 } from '@chakra-ui/react';
 import { FaMoon, FaSun } from 'react-icons/fa';
+import styles from './Navbar.module.css';
 
 const links = [
     { label: 'Home', href: '#hero' },
@@ -18,9 +22,10 @@ export default function Navbar() {
     const { colorMode, toggleColorMode } = useColorMode();
 
     // Refined colors
-    const bgColor = useColorModeValue('whiteAlpha.900', 'gray.800');
+    const bgColor = useColorModeValue('whiteAlpha.900', 'gray.700');
     const textColor = useColorModeValue('gray.800', 'gray.100');
     const hoverColor = useColorModeValue('teal.600', 'teal.300');
+    const boxShadow = useColorModeValue('md', '0 0 12px rgba(0, 255, 255, 0.2)');
 
     return (
         <Box
@@ -37,7 +42,8 @@ export default function Navbar() {
             py={3}
             px={5}
             borderRadius="xl"
-            boxShadow="md"
+            boxShadow={boxShadow}
+            border={useColorModeValue('1px solid #e2e8f0', '1px solid rgba(255, 255, 255, 0.1)')}
             backdropFilter="saturate(180%) blur(10px)"
         >
             <Flex align="center" justify="space-between">
@@ -60,7 +66,9 @@ export default function Navbar() {
                     variant="ghost"
                     color={textColor}
                     _hover={{ color: hoverColor }}
+                    className={styles.shinyIcon}
                 />
+
             </Flex>
         </Box>
     );

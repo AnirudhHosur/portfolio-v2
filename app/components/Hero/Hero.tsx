@@ -2,17 +2,18 @@
 
 import {
     Box,
+    Button,
     Flex,
     Heading,
-    Text,
-    Button,
     Image,
     Link,
     Stack,
-    useColorModeValue,
-    Tooltip
+    Text,
+    Tooltip,
+    useColorModeValue
 } from '@chakra-ui/react';
-import { FaLinkedin, FaGithub, FaGlobe, FaYoutube, FaDownload } from 'react-icons/fa';
+import { FaDownload, FaGithub, FaGlobe, FaLinkedin, FaYoutube } from 'react-icons/fa';
+import styles from './Hero.module.css';
 
 export default function Hero() {
     const textColor = useColorModeValue('gray.700', 'gray.200');
@@ -61,7 +62,7 @@ export default function Hero() {
                     </Stack>
 
                     <Stack direction={{ base: 'column', sm: 'row' }} spacing={4} justify={{ base: 'center', md: 'flex-start' }}>
-                        <Button colorScheme="teal" variant="solid">
+                        <Button colorScheme="teal" variant="solid" className={styles.shinyButton}>
                             Contact Me
                         </Button>
                         <Button
