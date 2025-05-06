@@ -81,7 +81,7 @@ export default function Hero() {
                 {/* Right Section - Profile Image */}
                 <Box flexShrink={0}>
                     <Image
-                        src="/anirudh.jpg"
+                        src="/images/Anirudh.jpg"
                         alt="Anirudh Hosur"
                         boxSize={{ base: '200px', md: '250px' }}
                         borderRadius="full"
