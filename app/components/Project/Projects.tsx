@@ -31,7 +31,7 @@ interface Project {
     description: string;
     created_at: string;
     language: string;
-    topics: string[];
+    topics?: string[]; // Optional, as not all repositories may have topics
 }
 
 export default function Projects() {
@@ -47,12 +47,11 @@ export default function Projects() {
         const fetchProjects = async () => {
             try {
                 const res = await fetch('https://api.github.com/users/AnirudhHosur/repos');
-                const data = await res.json();
+                const data: Project[] = await res.json(); // Use the GitHubRepo type here
                 const filtered = data
-                    .filter((repo: any) => !repo.fork)
-                    .map((repo: any) => ({
+                    .map((repo) => ({
                         ...repo,
-                        topics: repo.topics || [], // if available
+                        topics: repo.topics || [], // Ensure topics is always an array
                     }));
                 setProjects(filtered);
             } catch (err) {
@@ -84,7 +83,6 @@ export default function Projects() {
                         See All Projects
                     </Button>
                 </Flex>
-
 
                 <Drawer isOpen={isOpen} placement="right" onClose={onClose} size="xl">
                     <DrawerOverlay />

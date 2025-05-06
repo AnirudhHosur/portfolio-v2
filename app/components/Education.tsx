@@ -9,7 +9,7 @@ export default function Education() {
                 <VStack spacing={6} align="start">
                     <Box>
                         <Text fontWeight="bold">Dalhousie University</Text>
-                        <Text>Master's in Applied Computer Science (Sep 2022 – Dec 2023)</Text>
+                        <Text>Masters in Applied Computer Science (Sep 2022 – Dec 2023)</Text>
                         <Text fontSize="sm" color="gray.500">
                             Skills: Node.js · DevOps · JavaScript · React.js
                         </Text>

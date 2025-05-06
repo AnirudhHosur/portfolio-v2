@@ -1,5 +1,5 @@
 'use client';
-import { Box, Divider, Heading, SimpleGrid, Text, Tooltip, useColorModeValue, VStack } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid, Text, Tooltip, useColorModeValue, VStack } from '@chakra-ui/react';
 import styles from './Experience.module.css';
 
 const experiences = [
@@ -106,12 +106,14 @@ const milestones: Record<number, string> = {
     2026: 'Future opportunities await!',
 };
 
-export default function Experience() {
+const Experience = () => {
     const bgFront = useColorModeValue('white', 'gray.700');
     const bgBack = useColorModeValue('purple.700', 'purple.400');
     const colorFront = useColorModeValue('gray.800', 'gray.100');
     const colorBack = useColorModeValue('white', 'gray.900');
     const shadow = useColorModeValue('lg', 'dark-lg');
+    const textColor = useColorModeValue('gray.700', 'gray.300');
+    const tooltipBg = useColorModeValue('purple.500', 'gray.400');
 
     return (
         <Box py={10} px={5}>
@@ -135,7 +137,7 @@ export default function Experience() {
                                     <Box
                                         w="8px"
                                         h="30px"
-                                        bg={milestones[year] ? 'purple.500' : 'gray.400'}
+                                        bg={milestones[year] ? tooltipBg : 'gray.400'}
                                         borderRadius="full"
                                         className={milestones[year] ? styles.pulse : ''}
                                         _hover={{
@@ -145,12 +147,11 @@ export default function Experience() {
                                         }}
                                     />
                                 </Tooltip>
-                                <Text fontSize="xs" color={useColorModeValue('gray.700', 'gray.300')}>
+                                <Text fontSize="xs" color={textColor}>
                                     {year}
                                 </Text>
                             </VStack>
                         ))}
-
                     </Box>
                 </Box>
 
@@ -190,4 +191,6 @@ export default function Experience() {
             </Box>
         </Box>
     );
-}
+};
+
+export default Experience;
