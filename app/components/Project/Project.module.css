@@ -1,0 +1,77 @@
+.drawerSlide {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.shinyButton {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    animation: pulseGlow 2.5s infinite ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.shinyButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 200, 0.6);
+}
+
+.shinyButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0.1) 100%);
+    transform: skewX(-25deg);
+    z-index: 1;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -75%;
+    }
+
+    100% {
+        left: 125%;
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 255, 200, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 200, 0.6);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(0, 255, 200, 0.3);
+    }
+}
