@@ -1,14 +1,14 @@
 'use client';
 
+import { Box } from '@chakra-ui/react';
+import Certifications from './components/Certification/Certifications';
+import Contact from './components/Contact';
+import Education from './components/Education';
+import Experience from './components/Experience/Experience';
 import Hero from './components/Hero/Hero';
 import Navbar from './components/Navbar/Navbar';
 import Projects from './components/Project/Projects';
 import Skills from './components/Skill/Skills';
-import Certifications from './components/Certifications';
-import Education from './components/Education';
-import Contact from './components/Contact';
-import { Box } from '@chakra-ui/react';
-import Experience from './components/Experience/Experience';
 
 export default function Home() {
   return (
