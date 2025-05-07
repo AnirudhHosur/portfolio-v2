@@ -22,12 +22,6 @@ const experiences = [
         description: 'Taught cloud/software engineering. Mentored full-stack student projects and developed course content.',
     },
     {
-        role: 'Software Consultant',
-        company: 'Outlier',
-        duration: 'Jan 2024 – May 2024',
-        description: 'Worked on LLM optimization, prompt engineering, and ETL/data analytics using Java, Python, and GCP Vertex AI.',
-    },
-    {
         role: 'Cloud Developer Intern',
         company: 'CloudOps',
         duration: 'Aug 2023 – Dec 2023',
